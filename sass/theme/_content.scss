@@ -1,0 +1,67 @@
+// scss css for content goes here
+
+// archive content
+#archive-container {
+    padding-top: 0px;
+    background-color: $dark;
+
+    .container {
+        padding-top: 1px;
+    }
+}
+
+.article {
+
+    padding: 1px 1px 1px 1px !important;
+
+    article {
+        position: relative;
+    }
+    header {
+        img.wp-post-image {
+            width: 100%;
+            height: 377px;
+            object-fit: cover;
+        }
+        &:hover {
+            opacity: 0.4 !important;
+        }
+    }
+}
+
+.article-main {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 15px;
+    color:$light;
+    background-color: rgba(0,0,0,.7);
+    a {
+        text-decoration: none;
+        h2 {
+            color: $light;
+            font-size: 26px;
+            font-weight: bold; 
+        }
+    }
+}
+
+.article-content {
+    p {
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+    ul {
+        display: inline-block;
+        float: right;
+        margin-bottom: 0px;
+        li {
+            display: inline-block;
+            a {
+                color: $primary;
+                text-decoration: none;
+                margin-left: 5px;
+            }
+        }
+    }
+}

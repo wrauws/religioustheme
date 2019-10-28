@@ -1,0 +1,24 @@
+.event-post {
+    a {
+        color: $dark;
+        text-decoration: none !important;
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 0px !important;
+        }
+    }
+    .event-start-date {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 100;
+        color: $dark;
+        margin-bottom: 5px !important;
+    }
+    .event-excerpt {
+        //event text
+    }
+    .break-line {
+        border-top: 1px solid $primary;
+    }
+}

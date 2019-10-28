@@ -1,0 +1,29 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+//theme colors
+
+$primary: #ffcd00; //main theme color
+$primary-shade: darken($primary, 5%);
+
+$primary-dark: darken($primary, 25%);
+
+$dark: #000; // black
+$light: #fff; // white
+
+$secondary: #efefef;
+$secondary-shade: darken($secondary, 5%);
+
+$active: #ffcd00; //active link
+$unactive: #8a8a8a; //unactive link
+
+$hoverprim: darken($unactive, 20%);
+
+$heading: #000; //headings
+$text: #1a1a1a; //text option
+
+// themefont 
+
+$primary-font: 'Merriweather';
+$secondary-font: 'Open Sans';

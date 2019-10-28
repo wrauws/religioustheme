@@ -1,0 +1,86 @@
+// scss css for header goes here
+
+//header + title
+header.site-header { 
+    padding: 10px 0px 10px 0px;
+        h1 {
+            font-size: 36px !important;
+            line-height: 1 !important;
+            font-weight: bold;
+        a { 
+            color: $dark !important;
+            text-decoration: none !important;
+            font-family: $primary-font !important;
+        }
+        span {
+            font-size: 25px;
+            font-style: italic;
+            font-family: $primary-font !important;
+        }
+    }
+}
+
+
+// secondary nav menu (top left)
+#secondary-menu li a {
+    padding: 0px !important;
+    color: $heading;
+    &:after {
+        content: " »";
+    }
+    &:hover {
+        color: $hoverprim !important;
+    }
+}
+
+//main menu
+.main-nav {
+    padding: 0px !important;
+    background-color: $secondary !important;
+    border-top: 1px solid $secondary-shade !important;
+    li a {
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $unactive !important;
+        &:hover {
+            color: $hoverprim !important;
+        }
+    }
+    li.active {
+        background-color: $active;
+    }
+    li.active a {
+        color: $heading !important;
+    }
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+// menu dropdownh
+
+ul.dropdown-menu {
+    margin: 0px !important;
+    padding: 0px !important;
+    li a {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+//breadcrumbs
+#breadcrumbs {
+    background-color: $primary;
+    border-top: 1px solid $primary-shade;
+    border-bottom: 1px solid $primary-shade;
+    padding-left: 1rem;
+    a {
+        color: $dark;
+        text-decoration: none;
+    }
+}
