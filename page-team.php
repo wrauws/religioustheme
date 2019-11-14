@@ -28,24 +28,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main" id="main">
+			<main class="site-main row" id="main">
 
 				<?php
-				// WP_User_Query arguments
-				$args = array(
-					'exclude'        => array( 1 ),
-				);
+					// WP_User_Query arguments
+					$args = array(
+						'exclude'        => array( 1 ),
+					);
 
-				// The User Query
-				$user_query = new WP_User_Query( $args );
+					// The User Query
+					$user_query = new WP_User_Query( $args );
 
-				// The User Loop
-				if ( ! empty( $user_query->results ) ) {
-					foreach ( $user_query->results as $user ) {
-						get_template_part( 'loop-templates/content-team', 'page' );
-					}
-				} else {
-					// no users found
+					// The User Loop
+					if ( ! empty( $user_query->results ) ) {
+						foreach ( $user_query->results as $user ) { 
+							include( locate_template( 'loop-templates/content-team.php', false, false ) );
+						}
+					} else {
+						// no users found
 				} ?>
 
 			</main><!-- #main -->
@@ -59,4 +59,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #page-wrapper -->
 
-<?php get_footer();
+<?php get_footer(); ?>

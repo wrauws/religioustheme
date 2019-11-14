@@ -1,8 +1,18 @@
 // scss css for header goes here
 
 //header + title
+
+.uu-tag {
+    border-bottom: 1px solid $secondary-shade !important;
+    margin-bottom: 10px;
+    .uu-logo {
+        width: 200px;
+        padding-bottom: 5px;
+    }
+}
+
 header.site-header { 
-    padding: 10px 0px 10px 0px;
+    padding: 5px 0px 10px 0px;
         h1 {
             font-size: 36px !important;
             line-height: 1 !important;
@@ -78,8 +88,10 @@ ul.dropdown-menu {
     background-color: $primary;
     border-top: 1px solid $primary-shade;
     border-bottom: 1px solid $primary-shade;
-    padding-left: 1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
     a {
+        padding-left: 1rem;
         color: $dark;
         text-decoration: none;
     }

@@ -1,12 +1,13 @@
-.event-post {
+.event {
     a {
         color: $dark;
         text-decoration: none !important;
-        h2 {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 0px !important;
-        }
+        
+    }
+    h2 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 0px !important;
     }
     .event-start-date {
         text-transform: uppercase;
@@ -14,6 +15,7 @@
         font-weight: 100;
         color: $dark;
         margin-bottom: 5px !important;
+       
     }
     .event-excerpt {
         //event text

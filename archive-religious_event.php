@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-				<article class="event-post">
+				<article class="event">
 					<a href="<?php echo get_the_permalink() ?>">
 						<h2><?php the_title(); ?></h2>
 					</a>
@@ -46,9 +46,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</main><!-- #main -->
 
 			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+			<?php //get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 		</div><!-- .row -->
+
+		<?php
+			global $wp_query; // you can remove this line if everything works for you
+			
+			// don't display the button if there are not enough posts
+			if (  $wp_query->max_num_pages > 1 )
+			echo '<div class="rm_loadmore">More posts</div>';
+		?>
+		
 
 	</div><!-- #content -->
 

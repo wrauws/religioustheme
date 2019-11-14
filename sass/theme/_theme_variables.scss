@@ -5,7 +5,7 @@
 //theme colors
 
 $primary: #ffcd00; //main theme color
-$primary-shade: darken($primary, 5%);
+$primary-shade: darken($primary, 10%);
 
 $primary-dark: darken($primary, 25%);
 
@@ -22,8 +22,20 @@ $hoverprim: darken($unactive, 20%);
 
 $heading: #000; //headings
 $text: #1a1a1a; //text option
+$text2: #777777;
+
+$dark-heading: #222222;
 
 // themefont 
 
 $primary-font: 'Merriweather';
 $secondary-font: 'Open Sans';
+
+// bootstrap adjustments 
+
+$container-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px,
+  xl: 1300px
+);

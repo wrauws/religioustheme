@@ -31,6 +31,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
 		<header class="site-header">
+			<div class="uu-tag">
+				<div class="container">
+					<a href="https://www.uu.nl/">
+						<img class="uu-logo" src="<?php echo get_template_directory_uri(); ?>/uu/uu_logo_en.png" />
+					</a>
+				</div><!-- .container -->
+			</div>
 			<?php if ( 'container' == $container ) : ?>
 				<div class="container">
 			<?php endif; ?>

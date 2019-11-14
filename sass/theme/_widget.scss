@@ -13,6 +13,13 @@
             color: $dark !important;
         }
     }
+
+    #index-wrapper & {
+        background-color: $dark-heading;
+        border-left: 0;
+        border-right: 0;
+    }
+
 }
 
 // events in the sidebar
@@ -21,9 +28,12 @@
     font-size: 36px;
     font-family: $primary-font;
     margin-bottom: 20px;
+    #index-wrapper & {
+        color: $light;
+    }
 }
 
-.side-event-post {
+.event {
     span {
         color: $primary;
         font-size: 25px;
@@ -49,4 +59,14 @@
     .break-line {
         border-top: 1px solid $primary;
     }
+
+    #index-wrapper & {
+        p {
+            color: $light;
+        }
+        h2 {
+            color: $light;
+        }
+    }
+
 }

@@ -12,3 +12,22 @@
     align-items: center !important;
 }
 
+//load more button
+
+.rm_loadmore{
+    margin-top: 25px  !important;
+    background-color: $primary;
+    color: $dark !important;
+	border-radius: 4px;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 12px 6px;
+	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;  
+}
+.rm_loadmore:hover{
+	background-color: $primary-shade;
+}

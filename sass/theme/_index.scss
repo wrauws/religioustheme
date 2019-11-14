@@ -1,16 +1,21 @@
-// scss css for content goes here
-
-// archive content
-#archive-container {
-    padding-top: 0px;
+#index-wrapper {
+    padding: 0px;
     background-color: $dark;
-
-    .container {
-        padding-top: 1px;
+    .entry-title {
+        color: $light;
+        margin-top: 10px;
+        padding: 10px 0px 10px 0px;
     }
 }
 
-.article {
+.inner-row {
+    padding-top: 1px;
+    padding-right: 1px;
+}
+
+//article
+
+.ft-article {
 
     padding: 1px 1px 1px 1px !important;
 
@@ -29,7 +34,7 @@
     }
 }
 
-.article-main {
+.ft-article-main {
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -46,7 +51,7 @@
     }
 }
 
-.article-content {
+.ft-article-content {
     p {
         display: inline-block;
         margin-bottom: 0px;
@@ -66,3 +71,10 @@
     }
 }
 
+.team-part
+ {
+    background-color: $light;
+    //background-color: $dark-heading;
+    margin-top: 2px;
+    padding: 25px 0px;
+}
