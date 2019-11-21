@@ -1,0 +1,16 @@
+/* line 2, ../../sass/understrap/woocommerce.scss */
+.woocommerce-input-wrapper {
+  width: 100%;
+}
+
+/* line 7, ../../sass/understrap/woocommerce.scss */
+figure.woocommerce-product-gallery__wrapper {
+  max-width: inherit !important;
+}
+
+@media (min-width: 768px) {
+  /* line 13, ../../sass/understrap/woocommerce.scss */
+  #coupon_code.input-text {
+    width: 110px !important;
+  }
+}

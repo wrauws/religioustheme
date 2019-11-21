@@ -46,10 +46,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="col-sm-6">
 							<h2><?php echo $name ?></h2>
 							<h3><?php echo $function ?>,<?php echo $institute ?></h3>
+							<p><span><a href="<?php echo $user->user_url;?>">Personal website</a></span></p>
 							<p><span>Year of birth: </span><?php echo $birth ?></p>
 							<p><span>Current position: </span><?php echo $current_position ?></p>
 							<p><span>Past positions: </span><?php echo $past_position ?></p>
-							<p><span>Link to personal website: </span><?php echo 'empty' ?></p>
 						</div><!-- .col-sm-6 -->
 						<div class="col-sm-6">
 							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />

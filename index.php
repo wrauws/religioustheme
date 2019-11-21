@@ -23,15 +23,45 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
-                <div class="row inner-row">
+				<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+					</ol>
+					<div class="carousel-inner">
+							<?php
+								$args = array(
+									'posts_per_page' => 8,
+								);
+								
+								$the_query = new WP_Query($args);
+								if ($the_query->have_posts()) :
+									$counter = 0;
+									$active = "";
+									while ($the_query->have_posts()) : $the_query->the_post();
+										if ($counter == 0) {
+											$active = "active";
+										}else {
+											$active = "";
+										}
+										if ($counter % 4 == 0) :
+											echo $counter > 0 ? "</div></div>" : ""; // close div if it's not the first
+											echo $counter;
+											echo "<div class='carousel-item ". $active ."'>";
+											echo "<div class='row inner-row'>";
+										endif;
+										
+										get_template_part( 'loop-templates/content' , 'index' );
 
-                    <?php while ( have_posts() ) : the_post(); ?>
-                        <?php
-                            get_template_part( 'loop-templates/content' , 'index' );
-                        ?>
-                    <?php endwhile; // end of the loop. ?>
+										$counter++;
+								
+									endwhile;
+								endif;
+								wp_reset_postdata();
+							?>
+						</div>
+					</div>
 				</div>
-
 			</main><!-- #main -->
 
 			<!-- Do the right sidebar check -->

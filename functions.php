@@ -35,14 +35,14 @@ foreach ( $understrap_includes as $file ) {
 }
 
 // Load our function when hook is set
-add_action( 'pre_get_posts', 'rc_modify_query_exclude_category' );
-// Create a function to excplude some categories from the main query
-function rc_modify_query_exclude_category( $query ) {
-	// Check if on frontend and main query is modified
-    if ( ! is_admin() && $query->is_main_query() && is_home() ) {
-        $query->set( 'posts_per_page', '4' );
-    } // end if
-}
+// add_action( 'pre_get_posts', 'rc_modify_query_exclude_category' );
+// // Create a function to excplude some categories from the main query
+// function rc_modify_query_exclude_category( $query ) {
+// 	// Check if on frontend and main query is modified
+//     if ( ! is_admin() && $query->is_main_query() && is_home() ) {
+//         $query->set( 'posts_per_page', '8' );
+//     } // end if
+// }
 
 //load more button query
 function rm_my_load_more_scripts() {
