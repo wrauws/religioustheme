@@ -18,6 +18,20 @@ defined( 'ABSPATH' ) || exit;
 				<?php echo get_the_post_thumbnail( $post_id, 'thumbnail' );  ?>
 			</header>
 		</a>
+		<?php 
+			global $post;
+			$terms = wp_get_post_terms($post->ID, 'religious_theme');
+			if ($terms) {
+				$output = array();
+				foreach ($terms as $term) {
+					$output[] = '<p class="theme-tag" href="' .get_term_link( $term->slug, 'religious_theme') .'">' .$term->name .'</p>';
+				}
+				echo join( ', ', $output );
+			};
+		?>
+		<div class="post-info">
+			<p class="dark-theme-tag"><?php the_field('post_language'); ?></p>
+		</div><!-- .post-info -->
 		<div class="article-main">
 			<a href="<?php echo get_the_permalink() ?>">
 				<div class="article-title">

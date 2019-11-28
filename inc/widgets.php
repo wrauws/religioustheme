@@ -157,14 +157,38 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Full', 'understrap' ),
-				'id'            => 'footerfull',
-				'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
-				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
-				'after_widget'  => '</div><!-- .footer-widget -->',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			)
+				'name' => 'Footer Sidebar 1',
+				'id' => 'footer-sidebar-1',
+				'description' => 'Appears in the footer area',
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>',
+			) 
+		);
+
+		register_sidebar(
+			array(
+				'name' => 'Footer Sidebar 2',
+				'id' => 'footer-sidebar-2',
+				'description' => 'Appears in the footer area',
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>',
+			) 
+		);
+		
+		register_sidebar(
+			array(
+				'name' => 'Footer Sidebar 3',
+				'id' => 'footer-sidebar-3',
+				'description' => 'Appears in the footer area',
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>',
+			) 
 		);
 
 	}

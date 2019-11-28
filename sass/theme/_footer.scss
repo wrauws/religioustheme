@@ -3,3 +3,12 @@
 #wrapper-footer {
     background-color: $dark;
 }
+
+footer {
+    p, h1, h2, h3 {
+        color: $light;
+    }
+    a {
+        color: $primary;
+    }
+}

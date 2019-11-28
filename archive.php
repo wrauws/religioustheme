@@ -47,7 +47,7 @@ defined( 'ABSPATH' ) || exit;
 		<div class="post-navigation">
 			<div class="row">
 				<div class="col-sm-4 left-nav">			
-					<?php previous_posts_link( 'Older posts' ); ?>
+					<?php previous_posts_link( 'Newer posts' ); ?>
 				</div><!-- .col-sm-4 -->
 				<div class="col-sm-4 mid-nav">
 					<div class="numeric-pagination">
@@ -61,7 +61,7 @@ defined( 'ABSPATH' ) || exit;
 					</div><!-- .numeric-pagination -->
 				</div><!-- .col-sm-4 -->
 				<div class="col-sm-4 right-nav">
-					<?php next_posts_link( 'Newer posts' ); ?>
+					<?php next_posts_link( 'Older posts' ); ?>
 				</div><!-- .col-sm-4 -->
 			</div><!-- .row -->
 		</div><!-- .post-navigation -->

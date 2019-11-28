@@ -13,63 +13,49 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="index-wrapper">
-
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-
 		<div class="row">
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main" id="main">
+				<main class="site-main" id="main">
+					<div class="row">
+						<?php
+							$args = array(
+								'posts_per_page' => 6,
+							);
+							
+							$the_query = new WP_Query($args);
+							if ($the_query->have_posts()) :
+								$counter = 0;
+								while ($the_query->have_posts()) : $the_query->the_post();
+									if ($counter == 0) {
+									}else {
+									}
+									if ($counter % 3 == 0) :
+										echo $counter > 0 ? "</div>" : ""; // close div if it's not the first
+										echo "<div class='row inner-row'>";
+									endif;
+									
+									get_template_part( 'loop-templates/content' , 'index' );
 
-				<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-						<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-					</ol>
-					<div class="carousel-inner">
-							<?php
-								$args = array(
-									'posts_per_page' => 8,
-								);
-								
-								$the_query = new WP_Query($args);
-								if ($the_query->have_posts()) :
-									$counter = 0;
-									$active = "";
-									while ($the_query->have_posts()) : $the_query->the_post();
-										if ($counter == 0) {
-											$active = "active";
-										}else {
-											$active = "";
-										}
-										if ($counter % 4 == 0) :
-											echo $counter > 0 ? "</div></div>" : ""; // close div if it's not the first
-											echo $counter;
-											echo "<div class='carousel-item ". $active ."'>";
-											echo "<div class='row inner-row'>";
-										endif;
-										
-										get_template_part( 'loop-templates/content' , 'index' );
-
-										$counter++;
-								
-									endwhile;
-								endif;
-								wp_reset_postdata();
-							?>
-						</div>
+									$counter++;
+							
+								endwhile;
+							endif;
+							wp_reset_postdata();
+						?>
 					</div>
-				</div>
-			</main><!-- #main -->
+				</main><!-- #main -->
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+				<!-- Do the right sidebar check -->
+			<?php //get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 		</div><!-- .row -->
+	</div>
+</div><!-- #content -->
 
-	</div><!-- #content -->
 <div class="team-part">
 	<div class="container">
 		<div class="row inner-row index-team">
@@ -94,6 +80,37 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div>
 </div>
 
-</div><!-- #page-wrapper -->
+<div class="index-events">
+	<div class="container">
+		<div class="row">
+			<?php
+
+			// WP_Query arguments
+				$args = array(
+					'post_type'              => array( 'religious_event' ),
+				);
+				
+
+			// The Query
+				$query = new WP_Query( $args );
+
+
+			// The Loop
+				if ( $query->have_posts() ) {
+					while ( $query->have_posts() ) {
+						$query->the_post();
+						get_template_part( 'loop-templates/content' , 'indexevent' );
+					}
+				} else {
+					// no posts found
+				}
+
+				// Restore original Post Data
+				wp_reset_postdata();
+
+			?>
+		</div><!-- .row -->
+	</div><!-- .container -->
+</div><!-- .index-events -->
 
 <?php get_footer();

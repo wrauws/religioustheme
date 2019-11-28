@@ -12,7 +12,7 @@
 
 .article {
 
-    padding: 1px 1px 1px 1px !important;
+    padding: 0px 1px 1px 1px !important;
 
     article {
         position: relative;
@@ -45,6 +45,11 @@
         }
     }
 }
+.article-title {
+    h2 {
+        font-family: $primary-font;
+    }
+}
 
 .article-content {
     p {
@@ -66,3 +71,21 @@
     }
 }
 
+.article-block {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.theme-tag {
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    color: $dark;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 8px 10px 7px 10px;
+    text-transform: uppercase;
+    background-color: $primary;
+    margin-bottom: 0px;
+}
