@@ -6,6 +6,12 @@
         margin-top: 10px;
         padding: 10px 0px 10px 0px;
     }
+    .index-articles {
+        @include media-breakpoint-down(xs) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
 }
 
 .inner-row {
@@ -106,19 +112,24 @@
 .index-events {
     background-color: $primary;
     padding-top: 2px;
-    padding-bottom: 3px;
+    padding-bottom: 6px;
     .row {
         padding-left: 8px;
         padding-right: 8px;
         .index-event {
             padding: 0px;
             .event-container {
-                margin: 1px;
-                padding: 15px;
-                background-color: $primary-light-shade;
+                margin: 2px;
+                background-color: $light;
                 height: 100%;
+                border: 1px solid $primary-light-shade;
                 .event-info{
                     text-align: center;
+                    padding: 15px;
+                    background-color: $primary-light-shade;
+                }
+                .i-event-content {
+                    padding: 15px;
                 }
             }
         }
@@ -127,11 +138,12 @@
         margin-bottom: 0px;
     }
     p, a {
-        color: $text;
+        color: $dark;
+        font-weight: bold;
         text-decoration: none;
     }
     h2 {
-        color: $primary-darker;
+        color: $dark-heading;
         margin-top: 10px;
     }
     h2:hover {

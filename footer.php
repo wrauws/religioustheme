@@ -19,29 +19,29 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
-		<footer class="site-footer" id="colophon">
+		<footer class="site-footer row" id="colophon">
 
-		<div id="footer-sidebar1" class="col-sm-4">
-			<?php
-				if(is_active_sidebar('footer-sidebar-1')){
-					dynamic_sidebar('footer-sidebar-1');
-				}
-			?>
-		</div>
-		<div id="footer-sidebar2" class="col-sm-4">
-			<?php
-				if(is_active_sidebar('footer-sidebar-2')){
-					dynamic_sidebar('footer-sidebar-2');
-				}
-			?>
-		</div>
-		<div id="footer-sidebar3" class="col-sm-4">
-			<?php
-				if(is_active_sidebar('footer-sidebar-3')){
-					dynamic_sidebar('footer-sidebar-3');
-				}
-			?>
-		</div>
+			<div id="footer-sidebar1" class="col-sm-4">
+				<?php
+					if(is_active_sidebar('footer-sidebar-1')){
+						dynamic_sidebar('footer-sidebar-1');
+					}
+				?>
+			</div>
+			<div id="footer-sidebar2" class="col-sm-4">
+				<?php
+					if(is_active_sidebar('footer-sidebar-2')){
+						dynamic_sidebar('footer-sidebar-2');
+					}
+				?>
+			</div>
+			<div id="footer-sidebar3" class="col-sm-4">
+				<?php
+					if(is_active_sidebar('footer-sidebar-3')){
+						dynamic_sidebar('footer-sidebar-3');
+					}
+				?>
+			</div>
 			
 		</footer><!-- #colophon -->
 

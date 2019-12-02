@@ -14,9 +14,13 @@
 header.site-header { 
     padding: 5px 0px 10px 0px;
         h1 {
-            font-size: 36px !important;
-            line-height: 1 !important;
+            font-size: 36px;
+            line-height: 1;
             font-weight: bold;
+            @include media-breakpoint-down(xs) {
+                font-size: 25px;
+            }
+        }
         a { 
             color: $dark !important;
             text-decoration: none !important;
@@ -26,21 +30,37 @@ header.site-header {
             font-size: 25px;
             font-style: italic;
             font-family: $primary-font !important;
+            @include media-breakpoint-down(xs) {
+                font-size: 20px;
+            }
         }
+    }
+
+
+
+// secondary nav menu (top right)
+
+.sec-nav { 
+    justify-content: flex-end;
+    @include media-breakpoint-down(xs) {
+        justify-content: left;
     }
 }
 
-
-// secondary nav menu (top left)
-#secondary-menu li a {
-    padding: 0px !important;
-    color: $heading;
-    &:after {
-        content: " »";
-    }
-    &:hover {
-        color: $hoverprim !important;
-    }
+#secondary-menu {
+    text-align: right;
+    li {
+        a {
+            padding: 0px;
+            color: $heading;
+            &:after {
+                content: " »";
+            }//after
+            &:hover {
+                color: $hoverprim;
+            }//hover
+        }//a
+    }//li
 }
 
 //main menu
@@ -70,7 +90,7 @@ header.site-header {
     padding-left: 1rem;
 }
 
-// menu dropdownh
+// menu dropdown
 
 ul.dropdown-menu {
     margin: 0px !important;

@@ -33,16 +33,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<header class="site-header">
 			<div class="uu-tag">
 				<div class="container">
-					<a href="https://www.uu.nl/">
-						<img class="uu-logo" src="<?php echo get_template_directory_uri(); ?>/uu/uu_logo_en.png" />
-					</a>
+					<div class="row">
+						<div class="col-sm-6">
+							<a href="https://www.uu.nl/">
+								<img class="uu-logo" src="<?php echo get_template_directory_uri(); ?>/uu/uu_logo_en.png" />
+							</a>
+						</div><!-- .col-sm-6 -->
+						<div class="col-sm-6">
+							
+						</div><!-- .col-sm-6 -->
+					</div><!-- .row -->
 				</div><!-- .container -->
-			</div>
+			</div><!-- .uu-tag -->
 			<?php if ( 'container' == $container ) : ?>
 				<div class="container">
 			<?php endif; ?>
 				<div class="row">
-					<div div class="col-sm-6 vertical-center">
+					<div div class="col-12 col-sm-6 vertical-center">
 						<!-- Site branding -->
 						<?php if ( ! has_custom_logo() ) { ?>
 
@@ -67,13 +74,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</h1>
 
 						<?php endif; ?>
-					</div><!-- .col-sm-6 -->
+					</div><!-- .col-12.col-sm-6 -->
 
-					<div class="col-sm-4 vertical-center">
+					<div class="d-none d-sm-block col-sm-4 vertical-center">
 						<?php get_search_form() ?>
-					</div><!-- .col-sm-4 -->
+					</div><!-- .d-none.d-sm-block.col-sm-4 -->
 
-					<div class="col-sm-2 vertical-center">
+					<div class="d-none d-sm-block col-sm-2 vertical-center sec-nav">
 						<?php wp_nav_menu(
 							array(
 								'theme_location'  => 'secondary',
@@ -86,7 +93,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 							)
 						); ?>
-					</div><!-- .col-sm-2 -->
+					</div><!-- .d-none.d-sm-block.col-sm-2 -->
 
 				<?php } else {
 					the_custom_logo();
@@ -98,7 +105,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div><!-- .row -->
 		</header>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary main-nav">
+		<nav class="navbar navbar-expand-md navbar-light bg-primary main-nav">
 
 			<?php if ( 'container' == $container ) : ?>
 				<div class="container">
@@ -125,7 +132,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div><!-- .container -->
 				<?php endif; ?>
 		</nav><!-- .site-navigation -->
-		<div id="breadcrumbs">
+
+		<div id="breadcrumbs" class="d-none d-sm-block">
+
 			<?php if ( 'container' == $container ) : ?>
 				<div class="container">
 			<?php endif; ?>
@@ -139,5 +148,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php if ( 'container' == $container ) : ?>
 				</div><!-- .container -->
 			<?php endif; ?>
-		</div>
+		</div><!-- #breadcrums .d-none.d-sm-block -->
 	</div><!-- #wrapper-navbar end -->

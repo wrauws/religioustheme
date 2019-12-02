@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="index-wrapper">
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-		<div class="row">
+		<div class="row index-articles">
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
@@ -63,6 +63,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				// WP_User_Query arguments
 				$args = array(
 					'exclude'        => array( 1 ),
+					'posts_per_page' => 4, 
 				);
 
 				// The User Query
@@ -88,6 +89,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			// WP_Query arguments
 				$args = array(
 					'post_type'              => array( 'religious_event' ),
+					'posts_per_page' => 4, 
 				);
 				
 

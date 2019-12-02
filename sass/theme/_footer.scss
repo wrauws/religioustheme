@@ -5,10 +5,16 @@
 }
 
 footer {
+
+    #footer-sidebar1, #footer-sidebar2, #footer-sidebar3 {
+        display: inline-block;
+        text-align: center;
+    }
     p, h1, h2, h3 {
         color: $light;
     }
-    a {
+    p a {
         color: $primary;
+        text-decoration: none !important;
     }
 }
