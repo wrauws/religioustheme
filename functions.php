@@ -100,3 +100,23 @@ function rm_loadmore_ajax_handler(){
  
 add_action('wp_ajax_loadmore', 'rm_loadmore_ajax_handler'); // wp_ajax_{action}
 add_action('wp_ajax_nopriv_loadmore', 'rm_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
+
+// add < sm nav items
+
+add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
+function add_search_form($items, $args) {
+if( $args->theme_location == 'primary' )
+		$items .= '
+			<li class="menu-item menu-item-type-post_type menu-item-object-page nav-item d-block d-sm-none">
+				<a class="nav-link" href="contact">
+					Contact
+				</a>
+			</li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page nav-item d-block d-sm-none">
+				<a class="nav-link" href="privacy">
+					Privacy
+				</a>
+			</li>
+		';
+        return $items;
+}

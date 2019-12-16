@@ -1,5 +1,12 @@
 #post-wrapper, #post-wrapper {
     padding: 0px;
+
+    .container:first-child {
+        @include media-breakpoint-down(xs) {
+            padding: 0px;
+        }
+    }
+    
     #primary {
         padding-left: 15px;
         padding-right: 40px;
@@ -32,6 +39,9 @@
                 font-family: $primary-font;
                 padding: 30px 50px 20px 50px;
                 margin: 0px;
+                @include media-breakpoint-down(xs) {
+                    font-size: 25px;
+                }
             }
         }
     }
@@ -48,16 +58,30 @@
             font-family: $primary-font;
             font-weight: bold;
             margin: 0px;
+            @include media-breakpoint-down(xs) {
+                font-size: 20px;
+                text-align: center;
+                padding-bottom: 15px;
+            }
         }
         .post-author {
             float: right;
             font-size: 16px;
+            @include media-breakpoint-down(xs) {
+                font-size: 15x;
+                float: none;
+                text-align: center;
+            }
             img {
                 margin-left: 10px;
                 width: 70px;
                 height: 70px;
                 border-radius: 100%;
                 object-fit: cover;
+                @include media-breakpoint-down(xs) {
+                    width: 50px;
+                    height: 50px;
+                }
             }
         }
     }

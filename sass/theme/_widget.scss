@@ -19,7 +19,9 @@
         border-left: 0;
         border-right: 0;
     }
-
+    @include media-breakpoint-down(xs) {
+        margin-right: 0px;
+    }
 }
 
 // events in the sidebar

@@ -12,17 +12,22 @@
 
 .article {
 
-    padding: 0px 1px 1px 1px !important;
+    padding: 0px 1px 1px 1px;
+    
+    @include media-breakpoint-down(xs) {
+        padding-top: 10px;
+    }
 
     article {
         position: relative;
+
     }
     header {
         img.wp-post-image {
             width: 100%;
             height: 377px;
             object-fit: cover;
-        }
+        } 
         &:hover {
             opacity: 0.4 !important;
         }
@@ -74,6 +79,9 @@
 .article-block {
     padding-left: 20px;
     padding-right: 20px;
+    @include media-breakpoint-down(xs) {
+        padding: 0px 10px;
+    }
 }
 
 .theme-tag {

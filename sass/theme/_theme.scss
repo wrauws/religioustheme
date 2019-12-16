@@ -8,8 +8,9 @@
 
 // fix
 .vertical-center {
-    display: flex;
-    align-items: center;
+    margin-top: auto;  
+    margin-bottom: auto;
+
 }
 
 
@@ -24,6 +25,7 @@
     width: 80%;
     height: 52px;
     .left-nav, .mid-nav, .right-nav {
+        width: 33%;
         a { 
             color: $primary-dark !important;
             line-height: 0px;
@@ -34,11 +36,38 @@
         a:hover {
             color: $text !important;
         }
+        @include media-breakpoint-down(xs) {
+            padding-top: 10px;
+        }
     }
     .nav-links {
         margin: 0 auto !important;
     }
+
+    .left-nav {
+        @include media-breakpoint-down(xs) {
+            padding-right: 0px;
+        }
+    }
+
     .right-nav {
         text-align: right;
+        @include media-breakpoint-down(xs) {
+            padding-left: 0px;
+        }
     }
+    
+    .mid-nav {
+        @include media-breakpoint-down(xs) {
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 10px;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        width: 100%;
+        padding: 5px;
+    }
+
 }

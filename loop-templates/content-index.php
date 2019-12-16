@@ -29,7 +29,6 @@ defined( 'ABSPATH' ) || exit;
 				};
 			?>
 		<div class="post-info">
-			<a class="dark-theme-tag">NEW</a>
 			<p class="dark-theme-tag"><?php the_field('post_language'); ?></p>
 		</div><!-- .post-info -->
         <div class="ft-article-main">

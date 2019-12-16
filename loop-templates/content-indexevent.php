@@ -30,31 +30,40 @@ $start_end = get_field('event_end_time');
 
  <div class="col-sm-3 index-event">
     <div class="event-container">
-        <div class="event-info">
-            <p><?php 
-            
-            if($end_date && $start_date !== $end_date) {
-               
-                if($start_date_month == $end_date_month) {
+        <div class="row">
+            <div class="col-2">
+                <div class="agenda-logo">
+                    <span class="dashicons dashicons-calendar-alt"></span>
+                </div><!-- .agenda-logo -->
+            </div><!-- .col-2 -->
+            <div class="col-10">
+                <div class="event-info">
+                    <p><?php 
+                    
+                    if($end_date && $start_date !== $end_date) {
+                    
+                        if($start_date_month == $end_date_month) {
 
-                    echo $start_date_day . ' - ' . $end_date_day . ' ' .  $start_date_month . ' ' .  $start_date_year;
+                            echo $start_date_day . ' - ' . $end_date_day . ' ' .  $start_date_month . ' ' .  $start_date_year;
 
-                } else {
-                    echo $start_date . ' - ' . $end_date; 
-                }
+                        } else {
+                            echo $start_date . ' - ' . $end_date; 
+                        }
 
-            }else {
-                echo $start_date;
-            }
-            
-            ?></p>
-        </div><!-- .event-info -->
-        <div class="i-event-content">
-            <div class="article-title">
-                <a href="<?php echo get_the_permalink() ?>">
-                    <h2><?php the_title(); ?></h2>
-                </a>
-            </div><!-- .article title -->
-        </div><!-- .i-event-content -->
+                    }else {
+                        echo $start_date;
+                    }
+                    
+                    ?></p>
+                </div><!-- .event-info -->
+                <div class="i-event-content">
+                    <div class="article-title">
+                        <a href="<?php echo get_the_permalink() ?>">
+                            <h2><?php the_title(); ?></h2>
+                        </a>
+                    </div><!-- .article title -->
+                </div><!-- .i-event-content -->
+            </div><!-- .col-10 -->
+        </div><!-- .row -->
     </div><!-- .event-container -->
  </div><!-- .col-sm-3 -->

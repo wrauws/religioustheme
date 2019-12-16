@@ -116,6 +116,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</button>
 
 					<!-- The WordPress Menu goes here -->
+					<div class="phone-search d-block d-sm-none">
+						<?php get_search_form() ?>
+					</div>
+					
 					<?php wp_nav_menu(
 						array(
 							'theme_location'  => 'primary',
@@ -148,5 +152,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php if ( 'container' == $container ) : ?>
 				</div><!-- .container -->
 			<?php endif; ?>
+
 		</div><!-- #breadcrums .d-none.d-sm-block -->
+
 	</div><!-- #wrapper-navbar end -->
