@@ -10,8 +10,20 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 
+<?php
+
+$col = "";
+
+if ( is_page( 25 ) ) {
+    $col = "col-sm-3";
+} else {
+    $col = "col-sm-2";
+}
+
+?>
+
 <!--  article  -->
-<div class="col-sm-3 member">
+<div class="<?php echo $col; ?> member">
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
         <a href="<?php echo get_author_posts_url($user->ID); ?>">
             <?php
@@ -36,4 +48,3 @@ defined( 'ABSPATH' ) || exit;
         </a>
     </article>      
 </div><!-- col -->
-

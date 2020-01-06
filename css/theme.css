@@ -21993,7 +21993,7 @@ a.skip-link {
   margin-bottom: auto;
 }
 
-/* line 19, ../sass/theme/_theme.scss */
+/* line 18, ../sass/theme/_theme.scss */
 .post-navigation {
   margin: 20px auto;
   margin-bottom: 0px;
@@ -22003,11 +22003,11 @@ a.skip-link {
   width: 80%;
   height: 52px;
 }
-/* line 27, ../sass/theme/_theme.scss */
+/* line 26, ../sass/theme/_theme.scss */
 .post-navigation .left-nav, .post-navigation .mid-nav, .post-navigation .right-nav {
   width: 33%;
 }
-/* line 29, ../sass/theme/_theme.scss */
+/* line 28, ../sass/theme/_theme.scss */
 .post-navigation .left-nav a, .post-navigation .mid-nav a, .post-navigation .right-nav a {
   color: #806700 !important;
   line-height: 0px;
@@ -22015,38 +22015,38 @@ a.skip-link {
   font-weight: 400;
   text-decoration: none;
 }
-/* line 36, ../sass/theme/_theme.scss */
+/* line 35, ../sass/theme/_theme.scss */
 .post-navigation .left-nav a:hover, .post-navigation .mid-nav a:hover, .post-navigation .right-nav a:hover {
   color: #1a1a1a !important;
 }
 @media (max-width: 575.98px) {
-  /* line 27, ../sass/theme/_theme.scss */
+  /* line 26, ../sass/theme/_theme.scss */
   .post-navigation .left-nav, .post-navigation .mid-nav, .post-navigation .right-nav {
     padding-top: 10px;
   }
 }
-/* line 43, ../sass/theme/_theme.scss */
+/* line 42, ../sass/theme/_theme.scss */
 .post-navigation .nav-links {
   margin: 0 auto !important;
 }
 @media (max-width: 575.98px) {
-  /* line 47, ../sass/theme/_theme.scss */
+  /* line 46, ../sass/theme/_theme.scss */
   .post-navigation .left-nav {
     padding-right: 0px;
   }
 }
-/* line 53, ../sass/theme/_theme.scss */
+/* line 52, ../sass/theme/_theme.scss */
 .post-navigation .right-nav {
   text-align: right;
 }
 @media (max-width: 575.98px) {
-  /* line 53, ../sass/theme/_theme.scss */
+  /* line 52, ../sass/theme/_theme.scss */
   .post-navigation .right-nav {
     padding-left: 0px;
   }
 }
 @media (max-width: 575.98px) {
-  /* line 60, ../sass/theme/_theme.scss */
+  /* line 59, ../sass/theme/_theme.scss */
   .post-navigation .mid-nav {
     padding-left: 0px;
     padding-right: 0px;
@@ -22054,7 +22054,7 @@ a.skip-link {
   }
 }
 @media (max-width: 575.98px) {
-  /* line 19, ../sass/theme/_theme.scss */
+  /* line 18, ../sass/theme/_theme.scss */
   .post-navigation {
     width: 100%;
     padding: 5px;
@@ -22223,12 +22223,11 @@ ul.dropdown-menu li a {
 }
 /* line 113, ../sass/theme/_header.scss */
 #breadcrumbs a {
-  padding-left: 1rem;
   color: #000;
   text-decoration: none;
 }
 
-/* line 121, ../sass/theme/_header.scss */
+/* line 120, ../sass/theme/_header.scss */
 .phone-search {
   padding-top: 3px;
   padding-bottom: 3px;
@@ -22271,6 +22270,12 @@ ul.dropdown-menu li a {
 }
 
 /* line 37, ../sass/theme/_content.scss */
+.entry-content p {
+  font-size: 1.1rem;
+  line-height: 160%;
+}
+
+/* line 42, ../sass/theme/_content.scss */
 .article-main {
   position: absolute;
   bottom: 0px;
@@ -22279,57 +22284,58 @@ ul.dropdown-menu li a {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.7);
 }
-/* line 44, ../sass/theme/_content.scss */
+/* line 49, ../sass/theme/_content.scss */
 .article-main a {
   text-decoration: none;
 }
-/* line 46, ../sass/theme/_content.scss */
+/* line 51, ../sass/theme/_content.scss */
 .article-main a h2 {
   color: #fff;
   font-size: 26px;
   font-weight: bold;
+  line-height: 1.2;
 }
 
-/* line 54, ../sass/theme/_content.scss */
+/* line 60, ../sass/theme/_content.scss */
 .article-title h2 {
   font-family: "Merriweather";
 }
 
-/* line 60, ../sass/theme/_content.scss */
+/* line 66, ../sass/theme/_content.scss */
 .article-content p {
   display: inline-block;
   margin-bottom: 0px;
 }
-/* line 64, ../sass/theme/_content.scss */
+/* line 70, ../sass/theme/_content.scss */
 .article-content ul {
   display: inline-block;
   float: right;
   margin-bottom: 0px;
 }
-/* line 68, ../sass/theme/_content.scss */
+/* line 74, ../sass/theme/_content.scss */
 .article-content ul li {
   display: inline-block;
 }
-/* line 70, ../sass/theme/_content.scss */
+/* line 76, ../sass/theme/_content.scss */
 .article-content ul li a {
   color: #ffcd00;
   text-decoration: none;
   margin-left: 5px;
 }
 
-/* line 79, ../sass/theme/_content.scss */
+/* line 85, ../sass/theme/_content.scss */
 .article-block {
   padding-left: 20px;
   padding-right: 20px;
 }
 @media (max-width: 575.98px) {
-  /* line 79, ../sass/theme/_content.scss */
+  /* line 85, ../sass/theme/_content.scss */
   .article-block {
     padding: 0px 10px;
   }
 }
 
-/* line 87, ../sass/theme/_content.scss */
+/* line 93, ../sass/theme/_content.scss */
 .theme-tag {
   position: absolute;
   display: inline-block;
@@ -22452,7 +22458,7 @@ footer p a {
 #page-wrapper #primary, #single-wrapper #primary {
   padding-left: 15px;
   padding-right: 40px;
-  padding-top: 30px;
+  padding-top: 5px;
 }
 /* line 9, ../sass/theme/_page.scss */
 #page-wrapper #primary .entry-content, #single-wrapper #primary .entry-content {
@@ -22489,9 +22495,88 @@ footer p a {
   color: #000;
   margin-bottom: 5px !important;
 }
-/* line 23, ../sass/theme/_events.scss */
+/* line 20, ../sass/theme/_events.scss */
 .event .break-line {
   border-top: 1px solid #ffcd00;
+}
+
+/* line 27, ../sass/theme/_events.scss */
+.archive-events {
+  margin-bottom: 5px;
+}
+/* line 30, ../sass/theme/_events.scss */
+.archive-events .row .archive-event {
+  margin-bottom: 10px;
+  padding: 0px;
+}
+@media (max-width: 575.98px) {
+  /* line 30, ../sass/theme/_events.scss */
+  .archive-events .row .archive-event {
+    padding: 5px 0px;
+  }
+}
+/* line 36, ../sass/theme/_events.scss */
+.archive-events .row .archive-event .event-container {
+  padding: 15px;
+  background-color: #efefef;
+  margin: 5px;
+  height: 100%;
+}
+/* line 41, ../sass/theme/_events.scss */
+.archive-events .row .archive-event .event-container .col-1 {
+  padding-right: 5px;
+  text-align: right;
+}
+/* line 44, ../sass/theme/_events.scss */
+.archive-events .row .archive-event .event-container .col-1 .agenda-logo {
+  padding-top: 15px;
+  text-align: left;
+}
+/* line 47, ../sass/theme/_events.scss */
+.archive-events .row .archive-event .event-container .col-1 .agenda-logo span {
+  font-size: 40px;
+}
+/* line 52, ../sass/theme/_events.scss */
+.archive-events .row .archive-event .event-container .col-11 {
+  padding-left: 30px;
+}
+/* line 55, ../sass/theme/_events.scss */
+.archive-events .row .archive-event .event-container .event-info {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+/* line 61, ../sass/theme/_events.scss */
+.archive-events .row .archive-event .event-container .event-info p {
+  padding-bottom: 5px;
+}
+/* line 65, ../sass/theme/_events.scss */
+.archive-events .row .archive-event .event-container .i-event-content {
+  padding-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 73, ../sass/theme/_events.scss */
+.archive-events p {
+  margin-bottom: 0px;
+}
+/* line 76, ../sass/theme/_events.scss */
+.archive-events p, .archive-events a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 81, ../sass/theme/_events.scss */
+.archive-events h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #8a8a8a;
+}
+/* line 86, ../sass/theme/_events.scss */
+.archive-events h2:hover {
+  color: #575757;
 }
 
 /* line 2, ../sass/theme/_team.scss */
@@ -22506,8 +22591,8 @@ footer p a {
 /* line 9, ../sass/theme/_team.scss */
 .member article img {
   border-radius: 100%;
-  width: 150px;
-  height: 150px;
+  width: 104px;
+  height: 104px;
   object-fit: cover;
   margin-bottom: 10px;
 }
@@ -22545,6 +22630,16 @@ footer p a {
 #single-author .wrapper h2, #single-author .wrapper h3, #single-author .wrapper span {
   color: #000;
   font-weight: bold;
+}
+
+/* line 53, ../sass/theme/_team.scss */
+.p-3.control i {
+  cursor: pointer !important;
+}
+
+/* line 56, ../sass/theme/_team.scss */
+.text-muted {
+  color: #1a1a1a !important;
 }
 
 /* line 1, ../sass/theme/_single.scss */
@@ -22776,54 +22871,55 @@ footer p a {
   color: #fff;
   font-size: 26px;
   font-weight: bold;
+  line-height: 1.2;
 }
 
-/* line 68, ../sass/theme/_index.scss */
+/* line 69, ../sass/theme/_index.scss */
 .ft-article-content p {
   display: inline-block;
   margin-bottom: 0px;
 }
-/* line 72, ../sass/theme/_index.scss */
+/* line 73, ../sass/theme/_index.scss */
 .ft-article-content ul {
   display: inline-block;
   float: right;
   margin-bottom: 0px;
 }
-/* line 76, ../sass/theme/_index.scss */
+/* line 77, ../sass/theme/_index.scss */
 .ft-article-content ul li {
   display: inline-block;
 }
-/* line 78, ../sass/theme/_index.scss */
+/* line 79, ../sass/theme/_index.scss */
 .ft-article-content ul li a {
   color: #ffcd00;
   text-decoration: none;
   margin-left: 5px;
 }
 
-/* line 87, ../sass/theme/_index.scss */
+/* line 88, ../sass/theme/_index.scss */
 .index-team {
   padding-bottom: 0px;
 }
-/* line 89, ../sass/theme/_index.scss */
+/* line 90, ../sass/theme/_index.scss */
 .index-team .author_institute {
   margin-bottom: 0px;
 }
 
-/* line 94, ../sass/theme/_index.scss */
+/* line 95, ../sass/theme/_index.scss */
 .team-part {
   background-color: #fff;
   margin-top: 2px;
   padding: 25px 0px;
 }
 
-/* line 101, ../sass/theme/_index.scss */
+/* line 102, ../sass/theme/_index.scss */
 .post-info {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-/* line 107, ../sass/theme/_index.scss */
+/* line 108, ../sass/theme/_index.scss */
 .dark-theme-tag {
   display: inline-block;
   color: #000;
@@ -22834,46 +22930,46 @@ footer p a {
   background-color: #efefef;
 }
 
-/* line 119, ../sass/theme/_index.scss */
+/* line 120, ../sass/theme/_index.scss */
 .index-events {
   background-color: #ffcd00;
   padding-top: 2px;
   padding-bottom: 6px;
 }
-/* line 123, ../sass/theme/_index.scss */
+/* line 124, ../sass/theme/_index.scss */
 .index-events .row {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 126, ../sass/theme/_index.scss */
+/* line 127, ../sass/theme/_index.scss */
 .index-events .row .index-event {
   padding: 0px;
 }
 @media (max-width: 575.98px) {
-  /* line 126, ../sass/theme/_index.scss */
+  /* line 127, ../sass/theme/_index.scss */
   .index-events .row .index-event {
     padding: 5px 0px;
   }
 }
-/* line 131, ../sass/theme/_index.scss */
+/* line 132, ../sass/theme/_index.scss */
 .index-events .row .index-event .event-container {
   margin: 2px;
   height: 100%;
 }
-/* line 134, ../sass/theme/_index.scss */
+/* line 135, ../sass/theme/_index.scss */
 .index-events .row .index-event .event-container .col-2 {
   padding-right: 5px;
   text-align: right;
 }
-/* line 137, ../sass/theme/_index.scss */
+/* line 138, ../sass/theme/_index.scss */
 .index-events .row .index-event .event-container .col-2 .agenda-logo {
   padding-top: 15px;
 }
-/* line 139, ../sass/theme/_index.scss */
+/* line 140, ../sass/theme/_index.scss */
 .index-events .row .index-event .event-container .col-2 .agenda-logo span {
   font-size: 40px;
 }
-/* line 144, ../sass/theme/_index.scss */
+/* line 145, ../sass/theme/_index.scss */
 .index-events .row .index-event .event-container .event-info {
   padding-top: 15px;
   padding-left: 15px;
@@ -22881,33 +22977,33 @@ footer p a {
   text-transform: uppercase;
   font-size: 18px;
 }
-/* line 150, ../sass/theme/_index.scss */
+/* line 151, ../sass/theme/_index.scss */
 .index-events .row .index-event .event-container .event-info p {
   font-weight: lighter;
 }
-/* line 154, ../sass/theme/_index.scss */
+/* line 155, ../sass/theme/_index.scss */
 .index-events .row .index-event .event-container .i-event-content {
   padding-top: 0px;
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 162, ../sass/theme/_index.scss */
+/* line 163, ../sass/theme/_index.scss */
 .index-events p {
   margin-bottom: 0px;
 }
-/* line 165, ../sass/theme/_index.scss */
+/* line 166, ../sass/theme/_index.scss */
 .index-events p, .index-events a {
   color: #000;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 170, ../sass/theme/_index.scss */
+/* line 171, ../sass/theme/_index.scss */
 .index-events h2 {
   font-size: 18px;
   font-weight: 800;
   color: #222222;
 }
-/* line 175, ../sass/theme/_index.scss */
+/* line 176, ../sass/theme/_index.scss */
 .index-events h2:hover {
   color: #000;
 }
@@ -22948,3 +23044,5 @@ footer p a {
   font-weight: 700;
   font-style: normal;
 }
+
+/*# sourceMappingURL=theme.css.map */

@@ -48,10 +48,10 @@ foreach ( $understrap_includes as $file ) {
 function rm_my_load_more_scripts() {
  
 	global $wp_query; 
- 
+
 	// In most cases it is already included on the page and this line can be removed
 	wp_enqueue_script('jquery');
- 
+
 	// register our main script but do not enqueue it yet
 	wp_register_script( 'my_loadmore', get_stylesheet_directory_uri() . '/js/myloadmore.js', array('jquery') );
  
@@ -102,7 +102,6 @@ add_action('wp_ajax_loadmore', 'rm_loadmore_ajax_handler'); // wp_ajax_{action}
 add_action('wp_ajax_nopriv_loadmore', 'rm_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
 
 // add < sm nav items
-
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
 function add_search_form($items, $args) {
 if( $args->theme_location == 'primary' )
@@ -120,3 +119,19 @@ if( $args->theme_location == 'primary' )
 		';
         return $items;
 }
+
+//default language value: EN
+
+function save_post_lang_meta( $post_id, $post, $update ) {
+
+    $slug = 'post'; //Slug of CPT
+
+    // If this isn't a 'book' post, don't update it.
+    if ( $slug != $post->post_type ) {
+        return;
+    }
+
+    wp_set_object_terms( get_the_ID(), 'en', 'post_language' );
+}
+
+add_action( 'save_post', 'save_post_lang_meta', 10, 3 );

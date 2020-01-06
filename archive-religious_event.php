@@ -29,19 +29,38 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
+			<div class="archive-events">
+				<div class="container">
+					<div class="row">
+						<?php
 
-				<?php while ( have_posts() ) : the_post(); ?>
+						// WP_Query arguments
+							$args = array(
+								'post_type'              => array( 'religious_event' ),
+							);
+							
 
-				<article class="event">
-					<a href="<?php echo get_the_permalink() ?>">
-						<h2><?php the_title(); ?></h2>
-					</a>
-					<p class="event-start-date"><?php the_field('event_start_date'); ?></p>
-					<p class="event-excerpt"><?php the_excerpt(); ?></p>
-					<hr class="break-line">
-				</article>
+						// The Query
+							$query = new WP_Query( $args );
 
-				<?php endwhile; // end of the loop. ?>
+
+						// The Loop
+							if ( $query->have_posts() ) {
+								while ( $query->have_posts() ) {
+									$query->the_post();
+									get_template_part( 'loop-templates/content' , 'archiveevent' );
+								}
+							} else {
+								// no posts found
+							}
+
+							// Restore original Post Data
+							wp_reset_postdata();
+
+						?>
+					</div><!-- .row -->
+				</div><!-- .container -->
+			</div><!-- .archive-events -->
 
 			</main><!-- #main -->
 

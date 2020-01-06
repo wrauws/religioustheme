@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 		<a href="<?php echo get_the_permalink() ?>">
 			<header>
-				<?php echo get_the_post_thumbnail( $post_id, 'thumbnail' );  ?>
+				<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' );  ?>
 			</header>
 		</a>
 		<?php 
@@ -28,10 +28,14 @@ defined( 'ABSPATH' ) || exit;
 				}
 				echo join( ', ', $output );
 			};
-		?>
-		<div class="post-info">
-			<p class="dark-theme-tag"><?php the_field('post_language'); ?></p>
-		</div><!-- .post-info -->
+		
+			$lang_terms = wp_get_post_terms($post->ID, 'post_language');
+			if(has_term('nl' , 'post_language') ) { ?>
+				<div class="post-info">
+					<p class="dark-theme-tag"><?php the_field('post_language'); ?></p>
+				</div><!-- .post-info -->
+			<?php } ?>
+		
 		<div class="article-main">
 			<a href="<?php echo get_the_permalink() ?>">
 				<div class="article-title">

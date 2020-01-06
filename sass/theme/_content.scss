@@ -34,6 +34,11 @@
     }
 }
 
+.entry-content p {
+    font-size: 1.1rem;
+    line-height: 160%;
+}
+
 .article-main {
     position: absolute;
     bottom: 0px;
@@ -46,7 +51,8 @@
         h2 {
             color: $light;
             font-size: 26px;
-            font-weight: bold; 
+            font-weight: bold;
+            line-height: 1.2;
         }
     }
 }

@@ -33,6 +33,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php
 					// WP_User_Query arguments
 					$args = array(
+						'role' => 'author',
+						'order' => 'ASC',
+						'orderby' => 'display_name',
 						'exclude'        => array( 1 ),
 					);
 

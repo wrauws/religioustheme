@@ -17,10 +17,73 @@
         margin-bottom: 5px !important;
        
     }
-    .event-excerpt {
-        //event text
-    }
     .break-line {
         border-top: 1px solid $primary;
+    }
+}
+
+//archive events
+
+.archive-events {
+    margin-bottom: 5px;
+    .row {
+        .archive-event {
+            margin-bottom: 10px;
+            padding: 0px;
+            @include media-breakpoint-down(xs) {
+                padding: 5px 0px;
+            }
+            .event-container {
+                padding: 15px;
+                background-color: $secondary;
+                margin: 5px;
+                height: 100%;
+                .col-1 {
+                    padding-right: 5px;
+                    text-align: right;
+                    .agenda-logo {
+                        padding-top: 15px;
+                        text-align: left;
+                        span {
+                            font-size: 40px;
+                        }
+                    }
+                }
+                .col-11 {
+                    padding-left: 30px;
+                }
+                .event-info{
+                    padding-top: 15px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    p {
+                        padding-bottom: 5px;
+                    }
+                }
+                .i-event-content {
+                    padding-top: 0px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+    p {
+        margin-bottom: 0px;
+    }
+    p, a {
+        color: $dark;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    h2 {
+        font-size: 18px;
+        font-weight: 800;
+        color: $unactive;
+    }
+    h2:hover {
+        color: $hoverprim;
     }
 }

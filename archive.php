@@ -16,8 +16,8 @@ defined( 'ABSPATH' ) || exit;
 	<div class="container article-container">
 		
 			<?php 
-			$i == 0;
-			$row == 0;
+			$i = 0;
+			$row = 0;
 			$last = wp_count_posts()->publish;
 			//echo $last;
 			while ( have_posts() ) : the_post();  ?>
