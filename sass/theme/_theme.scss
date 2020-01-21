@@ -70,3 +70,18 @@
     }
 
 }
+
+.standard-theme-tag {
+    display: inline-block;
+    color: #000;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 8px 10px 7px 10px;
+    text-transform: uppercase;
+    background-color: $primary;
+    border: 1px solid #cca400;
+}
+
+.standard-theme-tag:hover {
+    background-color: $primary-shade;
+}

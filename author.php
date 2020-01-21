@@ -62,6 +62,46 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<p><span>Personal Profile: </span><?php echo $personal_profile ?></p>
 						</div><!-- .col-sm-12 -->
 					</div><!-- .row -->
+					
+
+					<?php if ( have_posts() ) : 
+						$i = 0;
+						$row = 0;
+						$last = wp_count_posts()->publish;
+						?>
+						<h2>Recent Blogs</h2>
+						<div class="recent-blogs">
+						<?php while (have_posts()) : the_post(); ?>
+
+							<?php
+
+								if ( ($i == 0 ) ) {
+									echo '<div class="article-block row">';
+								}
+
+								
+								get_template_part( 'loop-templates/content' );
+
+								if ( ($i + 1) % 9 == 0 )  {
+							
+									echo '</div>';
+									
+								}
+								
+								$i++;
+
+							?>
+
+						<?php endwhile; ?>
+						</div>
+							<?php get_template_part('includes/template','pager'); //wordpress template pager/pagination ?>
+
+					<?php else : ?>
+
+						<?php get_template_part('includes/template','error'); //wordpress template error message ?>
+
+					<?php endif; ?>
+
 				</main>
 
 				<!-- Do the right sidebar check -->

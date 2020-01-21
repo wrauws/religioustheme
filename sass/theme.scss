@@ -15,7 +15,7 @@
 
 // Template parts css/scss
 @import "theme/header";            // <-------- The template's header
-@import "theme/content";            // <-------- The template's content
+
 @import "theme/widget";            // <-------- The template's widget
 @import "theme/footer";            // <-------- The template's footer
 @import "theme/page";            // <-------- The template's page
@@ -23,6 +23,7 @@
 @import "theme/team";
 @import "theme/single";
 @import "theme/index";
+@import "theme/content";            // <-------- The template's content
 
 // Template includes
 @import "theme/fonts";               // <-------- The template's fonts import

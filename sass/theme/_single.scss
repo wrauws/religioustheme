@@ -93,15 +93,15 @@
     li {
         display: inline-block;
         margin: 0px 10px 10px 0px;
+        padding: 2px 10px 2px 10px;
         a {
             font-size: 12px;
-            padding: 8px 10px 8px 10px;
             text-transform: uppercase;
             text-decoration: none;
         }
     }
     li.category-item {
-        background-color: $primary;
+        background-color: $secondary-shade2;
         a {
             color: $dark;
             font-weight: bold;
@@ -113,7 +113,16 @@
             color: $text2;
         }
     }
+    li.themetag-item {
+        background-color: $primary;
+        a {
+            color: $dark;
+            font-weight: bold;
+        }
+    }
 }
+
+
 
 .single-event-wrapper {
     .post-author {

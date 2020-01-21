@@ -87,3 +87,24 @@
         color: $hoverprim;
     }
 }
+
+.older-events {
+    height: 207px;
+    a {
+        color: $text;
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        font-weight: 400;
+        //text-transform: uppercase;
+        padding: 0.375rem 0.75rem;
+        background-color: $primary;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        transform: translate( -15%, -50% );
+    }
+    a:hover {
+        background-color: $primary-shade;
+    }
+}

@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper team-wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -35,7 +35,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$args = array(
 						'role' => 'author',
 						'order' => 'ASC',
-						'orderby' => 'display_name',
+						// 'orderby' => 'meta_value_num',
+						// 'meta_key' => 'author_ordering',
+						// 'meta_query' => array(
+					 //        array(
+					 //            'key' => 'author_ordering',
+					 //            'type' => 'numeric'
+					 //        )
+					 //    )
 						'exclude'        => array( 1 ),
 					);
 

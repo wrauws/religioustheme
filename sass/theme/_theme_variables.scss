@@ -5,7 +5,7 @@
 //theme colors
 
 $primary: #ffcd00; //main theme color
-$primary-shade: darken($primary, 10%);
+$primary-shade: darken($primary, 5%);
 $primary-light-shade: darken($primary, 5%);
 
 $primary-dark: darken($primary, 25%);
@@ -16,6 +16,7 @@ $light: #fff; // white
 
 $secondary: #efefef;
 $secondary-shade: darken($secondary, 5%);
+$secondary-shade2: darken($secondary, 15%);
 
 $active: #ffcd00; //active link
 $unactive: #8a8a8a; //unactive link

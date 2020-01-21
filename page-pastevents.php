@@ -1,14 +1,9 @@
 <?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package understrap
- */
+
+/*
+Template Name: Past events page
+
+*/
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -46,26 +41,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 								'meta_query' => array(
 									'eventdate' => array(
-									  'relation' => 'OR',
+									  'relation' => 'AND',
 									  array(
-										'key' => 'event_start_date',
-										  'value' => $todaydate,
-										  'compare' => '>=',  
-									  ),
-									  array(
-										'relation' => 'AND',
+										'relation' => 'OR',
 										array(
-										  'key' => 'event_start_date',
+										  'key' => 'event_end_date',
 											'value' => $todaydate,
-											'compare' => '<',
+											'compare' => 'EXISTS',
 										),
 										array(
 										  'key' => 'event_end_date',
 											'value' => $todaydate,
-											'compare' => '>=',
+											'compare' => '<',
 										),
 										  
 									  ),
+									  array(
+										'key' => 'event_start_date',
+										  'value' => $todaydate,
+										  'compare' => '<',  
+									  ),
+									  
 										
 									),
 								  
@@ -91,7 +87,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						?>
 						<div class="col-sm-4 older-events">
-							<a href="<?php site_url(); ?>/past-events">See Past Events</a>
+							<a href="<?php site_url(); ?>/religious_event">Back to Upcoming Events</a>
 						</div>
 					</div><!-- .row -->
 				</div><!-- .container -->

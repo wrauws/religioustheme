@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							$counter = 0;
 							while ($the_query->have_posts()) : $the_query->the_post();	
 								if ($counter % 3 == 0) :
-									echo $counter > 0 ? "</div></div>" : ""; // close div if it's not the first
+									echo $counter > 0 ? "</div>" : ""; // close div if it's not the first
 									echo "<div class='row inner-row'>";
 								endif;
 								
@@ -105,10 +105,44 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php
 
 			// WP_Query arguments
+				$todaydate = date('Ymd');
+				
 				$args = array(
-					'post_type'              => array( 'religious_event' ),
-					'posts_per_page' => 4, 
+					'post_type' => array( 'religious_event' ),
+					'meta_key' => 'event_start_date',
+					'orderby' => 'meta_value',
+					'posts_per_page' => 4,
+					'order' => 'ASC',
+
+					'meta_query' => array(
+						'eventdate' => array(
+						  'relation' => 'OR',
+						  array(
+							'key' => 'event_start_date',
+							  'value' => $todaydate,
+							  'compare' => '>=',  
+						  ),
+						  array(
+							'relation' => 'AND',
+							array(
+							  'key' => 'event_start_date',
+								'value' => $todaydate,
+								'compare' => '<',
+							),
+							array(
+							  'key' => 'event_end_date',
+								'value' => $todaydate,
+								'compare' => '>=',
+							),
+							  
+						  ),
+							
+						),
+					  
+					),
 				);
+
+
 				
 
 			// The Query

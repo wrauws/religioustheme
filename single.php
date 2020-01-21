@@ -63,6 +63,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="row">
 						<div class="col-sm-7">
 							<ul class="tags-menu">
+								<li class="themetag-item">
+									<?php 
+									
+									$terms = wp_get_post_terms($post->ID, 'religious_theme');
+									if ($terms) {
+										$output = array();
+										foreach ($terms as $term) {
+											$output[] = '<a  href="' .get_term_link( $term->slug, 'religious_theme') .'">' .$term->name .'</a>';
+										}
+										echo join( ', ', $output );
+									};
+									
+									?>
+								</li>
 								<li class="category-item">
 									<?php the_category( '</li><li class="category-item">' ); ?>
 								</li>

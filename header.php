@@ -108,7 +108,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<nav class="navbar navbar-expand-md navbar-light bg-primary main-nav">
 
 			<?php if ( 'container' == $container ) : ?>
-				<div class="container">
+				<div id="nav-container"  class="container">
 			<?php endif; ?>
 
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
@@ -123,7 +123,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php wp_nav_menu(
 						array(
 							'theme_location'  => 'primary',
-							'container_class' => 'collapse navbar-collapse',
+							'container_class' => 'collapse navbar-collapse row',
 							'container_id'    => 'navbarNavDropdown',
 							'menu_class'      => 'navbar-nav',
 							'fallback_cb'     => '',

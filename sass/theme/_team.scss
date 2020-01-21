@@ -1,4 +1,9 @@
 // SCSS for the Team
+
+.team-wrapper .site-main {
+    margin-top: 25px;
+}
+
 .member article {
     text-align: center;
     a {
@@ -38,7 +43,7 @@
 }
 
 //scss for the single author (author.php)
-#single-author .wrapper {
+#single-author .wrapper #primary {
     padding: 0px;
     main {
         padding-top: 30px;
@@ -47,6 +52,10 @@
         color: $dark;
         font-weight: bold;
     }
+}
+
+#single-author .wrapper #primary .article-main h2 {
+    color:$light;
 }
 
 //left right buttons for the slider

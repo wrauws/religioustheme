@@ -20,6 +20,7 @@ defined( 'ABSPATH' ) || exit;
 		</a>
 		<?php 
 			global $post;
+			
 			$terms = wp_get_post_terms($post->ID, 'religious_theme');
 			if ($terms) {
 				$output = array();
